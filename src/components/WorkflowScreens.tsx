@@ -22,125 +22,125 @@ type WorkflowTab = 'intake' | 'sourcing' | 'purchase';
 
 const workflowData = {
   intake: {
-    title: 'Intake-to-Procurement (I2P)',
-    subtitle: 'Natural language request processing with AI-powered workflow automation',
+    title: 'Autonomous Decision Pipeline',
+    subtitle: 'End-to-end automated decision making from requirement to supplier selection',
     steps: [
-      { id: 'capture', label: 'Requirement Capture', icon: MessageSquare, status: 'completed' },
-      { id: 'validation', label: 'Budget Validation', icon: DollarSign, status: 'completed' },
-      { id: 'approval', label: 'Approval Routing', icon: User, status: 'active' },
-      { id: 'sourcing', label: 'Sourcing Decision', icon: Search, status: 'pending' },
-      { id: 'execution', label: 'Execution', icon: CheckCircle, status: 'pending' }
+      { id: 'analysis', label: 'Requirement Analysis', icon: MessageSquare, status: 'completed' },
+      { id: 'discovery', label: 'Supplier Discovery', icon: Search, status: 'completed' },
+      { id: 'evaluation', label: 'Multi-Criteria Evaluation', icon: TrendingUp, status: 'active' },
+      { id: 'optimization', label: 'Combinatorial Optimization', icon: Target, status: 'pending' },
+      { id: 'decision', label: 'Automated Decision', icon: CheckCircle, status: 'pending' }
     ],
     activeRequests: [
       {
-        id: 'REQ-2024-156',
-        title: 'Marketing Team Laptops',
+        id: 'DEC-2024-156',
+        title: 'Office Furniture Optimization',
         requester: 'Sarah Chen',
-        department: 'Marketing',
-        value: '$30,000',
-        status: 'pending-approval',
-        progress: 60,
-        urgency: 'high',
-        description: '15 MacBook Pros for design work',
-        nextAction: 'Department head approval required'
-      },
-      {
-        id: 'REQ-2024-157',
-        title: 'Office Furniture Upgrade',
-        requester: 'Mike Rodriguez',
         department: 'Operations',
-        value: '$12,500',
-        status: 'budget-review',
-        progress: 40,
-        urgency: 'medium',
-        description: '10 ergonomic desk chairs and standing desks',
-        nextAction: 'Budget validation in progress'
+        value: '$85,000',
+        status: 'multi-criteria-evaluation',
+        progress: 75,
+        urgency: 'high',
+        description: '8 suppliers evaluated for desk/chair combination',
+        nextAction: 'Optimization engine processing combinations'
       },
       {
-        id: 'REQ-2024-158',
-        title: 'Software Licenses',
-        requester: 'Lisa Wang',
+        id: 'DEC-2024-157',
+        title: 'Software License Bundle',
+        requester: 'Mike Rodriguez',
         department: 'IT',
-        value: '$8,400',
-        status: 'sourcing',
-        progress: 80,
+        value: '$45,000',
+        status: 'automated-negotiation',
+        progress: 85,
+        urgency: 'medium',
+        description: 'AI negotiating with 3 SaaS providers',
+        nextAction: 'Counter-offer evaluation in progress'
+      },
+      {
+        id: 'DEC-2024-158',
+        title: 'Marketing Services Package',
+        requester: 'Lisa Wang',
+        department: 'Marketing',
+        value: '$125,000',
+        status: 'confidence-review',
+        progress: 65,
         urgency: 'low',
-        description: 'Adobe Creative Suite annual licenses',
-        nextAction: 'Supplier quotes being evaluated'
+        description: 'Complex service requirements, 78% confidence',
+        nextAction: 'Manual review triggered - low confidence'
       }
     ]
   },
   sourcing: {
-    title: 'Autonomous Sourcing Engine',
-    subtitle: 'AI-powered supplier discovery, evaluation, and negotiation assistance',
+    title: 'Multi-Criteria Decision Analysis',
+    subtitle: 'Advanced MCDA algorithms for complex supplier evaluation and optimization',
     steps: [
-      { id: 'discovery', label: 'Supplier Discovery', icon: Search, status: 'completed' },
-      { id: 'evaluation', label: 'Bid Evaluation', icon: FileText, status: 'completed' },
-      { id: 'negotiation', label: 'Negotiation', icon: MessageSquare, status: 'active' },
-      { id: 'award', label: 'Award Decision', icon: CheckCircle, status: 'pending' },
-      { id: 'contract', label: 'Contract Setup', icon: FileText, status: 'pending' }
+      { id: 'criteria', label: 'Criteria Definition', icon: Target, status: 'completed' },
+      { id: 'weighting', label: 'Preference Weighting', icon: TrendingUp, status: 'completed' },
+      { id: 'scoring', label: 'Multi-Dimensional Scoring', icon: Activity, status: 'active' },
+      { id: 'ranking', label: 'Utility Ranking', icon: BarChart3, status: 'pending' },
+      { id: 'optimization', label: 'Combinatorial Optimization', icon: CheckCircle, status: 'pending' }
     ],
     activeProjects: [
       {
-        id: 'RFQ-2024-089',
-        title: 'Cloud Infrastructure Services',
-        category: 'IT Services',
-        value: '$180,000',
-        suppliers: 5,
-        bidsReceived: 4,
-        status: 'negotiation',
+        id: 'MCDA-2024-089',
+        title: 'IT Equipment Multi-Supplier Analysis',
+        category: 'Technology Hardware',
+        value: '$240,000',
+        suppliers: 12,
+        bidsReceived: 9,
+        status: 'combinatorial-optimization',
         deadline: '2024-12-20',
-        savings: '15.2%',
-        leadSupplier: 'CloudTech Solutions',
-        description: 'Multi-year cloud hosting and managed services'
+        savings: '18.7%',
+        leadSupplier: 'Optimal 3-supplier combination',
+        description: 'Complex optimization across laptops, monitors, and accessories'
       },
       {
-        id: 'RFQ-2024-090',
-        title: 'Marketing Agency Services',
+        id: 'MCDA-2024-090',
+        title: 'Professional Services Evaluation',
         category: 'Professional Services',
-        value: '$95,000',
-        suppliers: 8,
-        bidsReceived: 6,
-        status: 'evaluation',
+        value: '$180,000',
+        suppliers: 15,
+        bidsReceived: 12,
+        status: 'preference-learning',
         deadline: '2024-12-25',
-        savings: '8.7%',
-        leadSupplier: 'CreativeFlow Agency',
-        description: 'Digital marketing and brand management'
+        savings: '12.3%',
+        leadSupplier: 'AI learning requester preferences',
+        description: 'Complex service requirements with subjective quality factors'
       }
     ]
   },
   purchase: {
-    title: 'Purchase-to-Pay (P2P)',
-    subtitle: 'Streamlined PO management with automated 3-way matching and exception handling',
+    title: 'Decision Execution & Learning',
+    subtitle: 'Automated decision implementation with continuous learning and performance tracking',
     steps: [
-      { id: 'po-creation', label: 'PO Creation', icon: FileText, status: 'completed' },
-      { id: 'delivery', label: 'Delivery Tracking', icon: Truck, status: 'completed' },
-      { id: 'receipt', label: 'Receipt Verification', icon: Receipt, status: 'active' },
-      { id: 'matching', label: '3-Way Matching', icon: CheckCircle, status: 'pending' },
-      { id: 'payment', label: 'Payment Processing', icon: CreditCard, status: 'pending' }
+      { id: 'execution', label: 'Decision Execution', icon: Zap, status: 'completed' },
+      { id: 'monitoring', label: 'Performance Monitoring', icon: Activity, status: 'completed' },
+      { id: 'feedback', label: 'Outcome Collection', icon: MessageSquare, status: 'active' },
+      { id: 'learning', label: 'Model Learning', icon: Brain, status: 'pending' },
+      { id: 'optimization', label: 'Algorithm Optimization', icon: TrendingUp, status: 'pending' }
     ],
     activeOrders: [
       {
-        id: 'PO-45789',
-        supplier: 'TechPro Distributors',
-        items: 'Dell Monitors x24',
-        value: '$28,800',
-        status: 'delivered',
-        progress: 75,
+        id: 'DEC-45789',
+        supplier: 'Multi-supplier combination',
+        items: 'Laptops: Apple + Dell + Lenovo',
+        value: '$156,000',
+        status: 'performance-tracking',
+        progress: 85,
         orderDate: '2024-11-15',
-        deliveryDate: '2024-11-28',
-        nextAction: 'Receipt confirmation needed'
+        deliveryDate: '2024-12-05',
+        nextAction: 'Collecting delivery performance data'
       },
       {
-        id: 'PO-45790',
-        supplier: 'Office Express',
-        items: 'Stationery Supplies',
-        value: '$3,450',
-        status: 'in-transit',
-        progress: 50,
+        id: 'DEC-45790',
+        supplier: 'AI-optimized selection',
+        items: 'Cloud Services: AWS + Azure hybrid',
+        value: '$89,000',
+        status: 'learning-feedback',
+        progress: 95,
         orderDate: '2024-11-20',
-        deliveryDate: '2024-12-05',
-        nextAction: 'Shipment tracking active'
+        deliveryDate: '2024-11-30',
+        nextAction: 'Collecting user satisfaction feedback'
       }
     ]
   }
@@ -172,12 +172,12 @@ export function WorkflowScreens() {
     <div className="workflow-screens animate-fade-in">
       <div className="workflow-header">
         <div>
-          <h1>Procurement Workflows</h1>
-          <p>AI-powered end-to-end procurement process management</p>
+          <h1>Autonomous Decision Workflows</h1>
+          <p>Multi-agent AI system for automated procurement decision making</p>
         </div>
         <button className="btn btn-primary">
           <Plus size={18} />
-          New Workflow
+          New Decision Request
         </button>
       </div>
 
@@ -188,8 +188,8 @@ export function WorkflowScreens() {
         >
           <MessageSquare size={20} />
           <div>
-            <span>Intake to Procurement</span>
-            <small>I2P Process</small>
+            <span>Decision Pipeline</span>
+            <small>Automated Analysis</small>
           </div>
         </button>
         <button
@@ -198,8 +198,8 @@ export function WorkflowScreens() {
         >
           <Search size={20} />
           <div>
-            <span>Autonomous Sourcing</span>
-            <small>S2P Process</small>
+            <span>MCDA Engine</span>
+            <small>Multi-Criteria Analysis</small>
           </div>
         </button>
         <button
@@ -208,8 +208,8 @@ export function WorkflowScreens() {
         >
           <ShoppingCart size={20} />
           <div>
-            <span>Purchase to Pay</span>
-            <small>P2P Process</small>
+            <span>Learning & Execution</span>
+            <small>Continuous Improvement</small>
           </div>
         </button>
       </div>
@@ -247,7 +247,7 @@ export function WorkflowScreens() {
           {activeTab === 'intake' && (
             <div className="intake-details">
               <div className="section-header">
-                <h3>Active Requests</h3>
+                <h3>Active Decision Requests</h3>
                 <div className="section-actions">
                   <button className="btn btn-ghost btn-sm">
                     <Filter size={16} />
@@ -317,7 +317,7 @@ export function WorkflowScreens() {
           {activeTab === 'sourcing' && (
             <div className="sourcing-details">
               <div className="section-header">
-                <h3>Active Sourcing Projects</h3>
+                <h3>Multi-Criteria Decision Analysis</h3>
                 <div className="section-actions">
                   <button className="btn btn-ghost btn-sm">
                     <Filter size={16} />
@@ -380,7 +380,7 @@ export function WorkflowScreens() {
           {activeTab === 'purchase' && (
             <div className="purchase-details">
               <div className="section-header">
-                <h3>Active Purchase Orders</h3>
+                <h3>Decision Execution & Learning</h3>
                 <div className="section-actions">
                   <button className="btn btn-ghost btn-sm">
                     <Filter size={16} />

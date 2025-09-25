@@ -21,67 +21,67 @@ import {
 const analyticsData = {
   overview: [
     { 
-      label: 'Total Spend', 
-      value: '$24.2M', 
-      change: '+12.5%', 
+      label: 'Decisions Processed', 
+      value: '1,247', 
+      change: '+34%', 
       trend: 'up', 
-      icon: DollarSign,
-      detail: 'vs last quarter'
+      icon: Activity,
+      detail: 'this quarter'
     },
     { 
-      label: 'Cost Savings', 
-      value: '$3.8M', 
-      change: '+18.2%', 
+      label: 'Automation Rate', 
+      value: '87.2%', 
+      change: '+15%', 
+      trend: 'up', 
+      icon: Zap,
+      detail: 'vs manual baseline'
+    },
+    { 
+      label: 'Decision Accuracy', 
+      value: '94.8%', 
+      change: '+2.3%', 
       trend: 'up', 
       icon: Target,
-      detail: 'year to date'
+      detail: 'validated decisions'
     },
     { 
-      label: 'Active Suppliers', 
-      value: '127', 
-      change: '+3', 
-      trend: 'up', 
-      icon: Users,
-      detail: 'this month'
-    },
-    { 
-      label: 'Avg Cycle Time', 
-      value: '8.2 days', 
-      change: '-15%', 
+      label: 'Avg Decision Time', 
+      value: '2.4 min', 
+      change: '-78%', 
       trend: 'down', 
       icon: Clock,
-      detail: 'improvement'
+      detail: 'vs manual process'
     }
   ],
   categories: [
-    { name: 'IT Equipment', spend: 8500000, percentage: 35.1, change: 12.3 },
-    { name: 'Professional Services', spend: 5280000, percentage: 21.8, change: -4.2 },
-    { name: 'Office Supplies', spend: 3840000, percentage: 15.9, change: 8.7 },
-    { name: 'Marketing', spend: 2640000, percentage: 10.9, change: 22.1 },
-    { name: 'Facilities', spend: 2160000, percentage: 8.9, change: -1.8 },
-    { name: 'Other', spend: 1800000, percentage: 7.4, change: 5.2 }
+    { name: 'IT Equipment', spend: 423, percentage: 33.9, change: 12.3 },
+    { name: 'Professional Services', spend: 267, percentage: 21.4, change: -4.2 },
+    { name: 'Office Supplies', spend: 198, percentage: 15.9, change: 8.7 },
+    { name: 'Marketing Services', spend: 156, percentage: 12.5, change: 22.1 },
+    { name: 'Facilities', spend: 124, percentage: 9.9, change: -1.8 },
+    { name: 'Other', spend: 79, percentage: 6.4, change: 5.2 }
   ],
   suppliers: [
-    { name: 'TechFlow Solutions', spend: 1250000, performance: 94, risk: 'low' },
-    { name: 'Global Manufacturing', spend: 2800000, performance: 88, risk: 'low' },
-    { name: 'CloudServ Infrastructure', spend: 890000, performance: 96, risk: 'low' },
-    { name: 'QuickPrint Services', spend: 450000, performance: 76, risk: 'high' },
-    { name: 'Logistics Express', spend: 1500000, performance: 82, risk: 'medium' }
+    { name: 'Multi-Supplier Decisions', spend: 456, performance: 96, risk: 'low' },
+    { name: 'Single Supplier Decisions', spend: 623, performance: 91, risk: 'low' },
+    { name: 'Negotiated Decisions', spend: 89, performance: 94, risk: 'low' },
+    { name: 'Manual Override Decisions', spend: 45, performance: 88, risk: 'medium' },
+    { name: 'Low Confidence Decisions', spend: 34, performance: 82, risk: 'high' }
   ],
   trends: {
     monthly: [
-      { month: 'Jan', spend: 1800000, savings: 240000 },
-      { month: 'Feb', spend: 2100000, savings: 315000 },
-      { month: 'Mar', spend: 2400000, savings: 390000 },
-      { month: 'Apr', spend: 1950000, savings: 285000 },
-      { month: 'May', spend: 2650000, savings: 425000 },
-      { month: 'Jun', spend: 2200000, savings: 350000 },
-      { month: 'Jul', spend: 2750000, savings: 465000 },
-      { month: 'Aug', spend: 2300000, savings: 380000 },
-      { month: 'Sep', spend: 2850000, savings: 510000 },
-      { month: 'Oct', spend: 2450000, savings: 405000 },
-      { month: 'Nov', spend: 2900000, savings: 550000 },
-      { month: 'Dec', spend: 2650000, savings: 485000 }
+      { month: 'Jan', spend: 89, savings: 78 },
+      { month: 'Feb', spend: 95, savings: 84 },
+      { month: 'Mar', spend: 112, savings: 89 },
+      { month: 'Apr', spend: 98, savings: 86 },
+      { month: 'May', spend: 134, savings: 91 },
+      { month: 'Jun', spend: 118, savings: 88 },
+      { month: 'Jul', spend: 145, savings: 93 },
+      { month: 'Aug', spend: 128, savings: 90 },
+      { month: 'Sep', spend: 156, savings: 94 },
+      { month: 'Oct', spend: 142, savings: 92 },
+      { month: 'Nov', spend: 167, savings: 95 },
+      { month: 'Dec', spend: 158, savings: 94 }
     ]
   }
 };
@@ -89,35 +89,35 @@ const analyticsData = {
 const insights = [
   {
     type: 'opportunity',
-    title: 'Supplier Consolidation Opportunity',
-    description: 'Consolidating office supply vendors could save $48K annually',
-    impact: '$48,000/year',
+    title: 'Multi-Supplier Optimization Opportunity',
+    description: 'Increasing multi-supplier decisions could improve savings by 23%',
+    impact: '+$180,000/year',
     confidence: 'High',
-    action: 'Create consolidation plan'
+    action: 'Adjust optimization thresholds'
   },
   {
     type: 'risk',
-    title: 'Supplier Concentration Risk',
-    description: 'Top 3 suppliers represent 65% of total spend',
-    impact: 'Business continuity risk',
+    title: 'Low Confidence Decision Pattern',
+    description: '12% of high-value decisions require manual review',
+    impact: 'Automation efficiency risk',
     confidence: 'Medium',
-    action: 'Diversify supplier base'
+    action: 'Enhance preference learning'
   },
   {
     type: 'trend',
-    title: 'IT Spend Increasing',
-    description: 'IT category spend up 35% due to digital transformation',
-    impact: 'Budget variance',
+    title: 'Decision Accuracy Improving',
+    description: 'AI accuracy increased 4.2% after latest model update',
+    impact: 'Reduced manual intervention',
     confidence: 'High',
-    action: 'Review IT procurement strategy'
+    action: 'Deploy to additional categories'
   },
   {
     type: 'performance',
-    title: 'Cycle Time Improvement',
-    description: 'Average procurement cycle time reduced by 15% this quarter',
-    impact: 'Process efficiency gain',
+    title: 'Negotiation Agent Success',
+    description: 'Automated negotiations achieving 8.7% average price reductions',
+    impact: 'Enhanced cost optimization',
     confidence: 'High',
-    action: 'Document best practices'
+    action: 'Expand negotiation capabilities'
   }
 ];
 
@@ -157,8 +157,8 @@ export function Analytics() {
     <div className="analytics animate-fade-in">
       <div className="analytics-header">
         <div>
-          <h1>Procurement Analytics</h1>
-          <p>AI-powered insights and comprehensive spend intelligence</p>
+          <h1>Decision Engine Analytics</h1>
+          <p>Autonomous decision performance, learning insights, and optimization metrics</p>
         </div>
         <div className="header-actions">
           <select 
@@ -237,15 +237,15 @@ export function Analytics() {
             <div className="charts-section">
               <div className="spend-trend-chart card">
                 <div className="card-header">
-                  <h3>Monthly Spend & Savings Trend</h3>
+                  <h3>Monthly Decisions & Automation Rate</h3>
                   <div className="chart-legend">
                     <div className="legend-item">
                       <div className="legend-color spend"></div>
-                      <span>Spend</span>
+                      <span>Decisions</span>
                     </div>
                     <div className="legend-item">
                       <div className="legend-color savings"></div>
-                      <span>Savings</span>
+                      <span>Automation %</span>
                     </div>
                   </div>
                 </div>
@@ -313,7 +313,7 @@ export function Analytics() {
 
               <div className="category-breakdown card">
                 <div className="card-header">
-                  <h3>Spend by Category</h3>
+                  <h3>Decisions by Category</h3>
                 </div>
                 <div className="card-body">
                   <div className="category-chart">
@@ -321,7 +321,7 @@ export function Analytics() {
                       <div key={index} className="category-item">
                         <div className="category-info">
                           <div className="category-name">{category.name}</div>
-                          <div className="category-amount">{formatCurrency(category.spend)}</div>
+                          <div className="category-amount">{category.spend} decisions</div>
                         </div>
                         <div className="category-bar">
                           <div 
@@ -344,8 +344,8 @@ export function Analytics() {
         {selectedView === 'suppliers' && (
           <div className="suppliers-section">
             <div className="section-header">
-              <h2>Top Suppliers Analysis</h2>
-              <p>Performance and spend analysis for key supplier relationships</p>
+              <h2>Decision Type Performance Analysis</h2>
+              <p>Automation performance and accuracy analysis by decision complexity</p>
             </div>
             
             <div className="suppliers-table card">
@@ -353,10 +353,10 @@ export function Analytics() {
                 <table className="suppliers-data">
                   <thead>
                     <tr>
-                      <th>Supplier</th>
-                      <th>Annual Spend</th>
-                      <th>Performance Score</th>
-                      <th>Risk Level</th>
+                      <th>Decision Type</th>
+                      <th>Volume</th>
+                      <th>Accuracy Score</th>
+                      <th>Confidence Level</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -370,7 +370,7 @@ export function Analytics() {
                         </td>
                         <td>
                           <div className="spend-cell">
-                            {formatCurrency(supplier.spend)}
+                            {supplier.spend} decisions
                           </div>
                         </td>
                         <td>
@@ -404,8 +404,8 @@ export function Analytics() {
         {selectedView === 'insights' && (
           <div className="insights-section">
             <div className="section-header">
-              <h2>AI-Powered Insights</h2>
-              <p>Strategic recommendations based on comprehensive data analysis</p>
+              <h2>Decision Engine Insights</h2>
+              <p>AI-generated recommendations for improving automation performance</p>
             </div>
             
             <div className="insights-grid">

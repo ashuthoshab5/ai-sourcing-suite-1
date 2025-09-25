@@ -15,23 +15,23 @@ const UserContext = createContext<UserContextType | undefined>(undefined);
 const personaConfig = {
   'cpo': {
     userName: 'Sarah Chen',
-    userRole: 'Chief Procurement Officer',
-    permissions: ['strategic-sourcing', 'supplier-management', 'analytics', 'budget-oversight']
+    userRole: 'Chief Procurement Officer', 
+    permissions: ['decision-oversight', 'automation-strategy', 'performance-analytics', 'system-optimization']
   },
   'procurement-manager': {
     userName: 'Mike Rodriguez',
     userRole: 'Senior Procurement Manager',
-    permissions: ['sourcing', 'supplier-evaluation', 'contract-management', 'team-management']
+    permissions: ['decision-review', 'confidence-monitoring', 'exception-handling', 'agent-oversight']
   },
   'operations-manager': {
     userName: 'Lisa Wang',
     userRole: 'Operations Manager',
-    permissions: ['purchase-orders', 'invoice-processing', 'receipt-verification', 'vendor-communication']
+    permissions: ['automation-operations', 'decision-pipeline', 'performance-monitoring', 'workflow-optimization']
   },
   'finance-manager': {
     userName: 'David Kumar',
     userRole: 'Finance Manager',
-    permissions: ['spend-analysis', 'budget-monitoring', 'financial-reporting', 'compliance']
+    permissions: ['cost-optimization', 'roi-analysis', 'financial-impact', 'decision-validation']
   }
 };
 

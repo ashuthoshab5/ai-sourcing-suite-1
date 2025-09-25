@@ -13,7 +13,8 @@ import {
   Clock,
   Users,
   TrendingUp,
-  AlertTriangle
+  AlertTriangle,
+  Target
 } from 'lucide-react';
 
 interface Agent {
@@ -30,96 +31,108 @@ interface Agent {
 
 const agents: Agent[] = [
   {
-    id: 'intake',
-    name: 'Intake Agent',
+    id: 'requirement',
+    name: 'Requirement Analysis',
     icon: MessageSquare,
     status: 'active',
-    specialty: 'Natural language requirement processing',
-    tasks: ['Requirement capture', 'Needs analysis', 'Budget validation'],
-    currentTask: 'Processing laptop request for Marketing team',
+    specialty: 'Multi-dimensional requirement parsing and structuring',
+    tasks: ['NLP processing', 'Specification extraction', 'Preference elicitation'],
+    currentTask: 'Analyzing office furniture specifications',
     performance: 94,
-    collaborations: ['sourcing', 'compliance']
+    collaborations: ['discovery', 'evaluation']
   },
   {
-    id: 'sourcing',
-    name: 'Sourcing Agent',
+    id: 'discovery',
+    name: 'Supplier Discovery',
     icon: Search,
     status: 'processing',
-    specialty: 'Market intelligence and supplier discovery',
-    tasks: ['Supplier discovery', 'Market analysis', 'RFQ generation'],
-    currentTask: 'Analyzing cloud service providers',
+    specialty: 'Intelligent supplier identification and capability matching',
+    tasks: ['Supplier matching', 'Capability assessment', 'Market intelligence'],
+    currentTask: 'Discovering suppliers for cloud infrastructure',
     performance: 89,
-    collaborations: ['negotiation', 'analytics']
+    collaborations: ['evaluation', 'negotiation']
+  },
+  {
+    id: 'evaluation',
+    name: 'Bid Evaluation',
+    icon: TrendingUp,
+    status: 'active',
+    specialty: 'Multi-criteria decision analysis and bid scoring',
+    tasks: ['MCDA analysis', 'TCO calculation', 'Risk assessment'],
+    currentTask: 'Evaluating 8 furniture supplier bids',
+    performance: 91,
+    collaborations: ['optimization', 'verification']
+  },
+  {
+    id: 'optimization',
+    name: 'Optimization Engine',
+    icon: Target,
+    status: 'processing',
+    specialty: 'Combinatorial optimization and supplier combination analysis',
+    tasks: ['Mathematical optimization', 'Constraint solving', 'Trade-off analysis'],
+    currentTask: 'Optimizing 3-supplier combination for IT equipment',
+    performance: 96,
+    collaborations: ['evaluation', 'negotiation']
   },
   {
     id: 'negotiation',
     name: 'Negotiation Agent',
     icon: DollarSign,
     status: 'active',
-    specialty: 'Automated contract negotiation',
-    tasks: ['Price analysis', 'Terms optimization', 'Contract drafting'],
-    currentTask: 'Negotiating SaaS license terms',
-    performance: 91,
-    collaborations: ['sourcing', 'compliance']
+    specialty: 'Automated negotiation and counter-offer management',
+    tasks: ['Price negotiation', 'Terms optimization', 'Counter-offer analysis'],
+    currentTask: 'Negotiating volume discounts with TechFlow',
+    performance: 92,
+    collaborations: ['discovery', 'verification']
   },
   {
-    id: 'analytics',
-    name: 'Analytics Agent',
-    icon: TrendingUp,
+    id: 'learning',
+    name: 'Learning Agent',
+    icon: Brain,
     status: 'idle',
-    specialty: 'Real-time procurement intelligence',
-    tasks: ['Spend analysis', 'Performance tracking', 'Predictive modeling'],
-    performance: 96,
-    collaborations: ['intake', 'sourcing']
+    specialty: 'Continuous improvement and preference learning',
+    tasks: ['Model retraining', 'Preference learning', 'Performance optimization'],
+    performance: 97,
+    collaborations: ['requirement', 'evaluation']
   },
   {
-    id: 'compliance',
-    name: 'Compliance Agent',
+    id: 'verification',
+    name: 'Verification Agent',
     icon: Shield,
     status: 'active',
-    specialty: 'Risk assessment and regulatory compliance',
-    tasks: ['Risk evaluation', 'Compliance checking', 'Audit preparation'],
-    currentTask: 'Validating supplier certifications',
-    performance: 92,
-    collaborations: ['intake', 'invoice']
-  },
-  {
-    id: 'invoice',
-    name: 'Invoice Agent',
-    icon: FileText,
-    status: 'processing',
-    specialty: 'Automated invoice processing and matching',
-    tasks: ['OCR processing', '3-way matching', 'Exception handling'],
-    currentTask: 'Processing 24 invoices',
-    performance: 97,
-    collaborations: ['compliance']
+    specialty: 'Decision validation and compliance checking',
+    tasks: ['Decision validation', 'Compliance checking', 'Risk assessment'],
+    currentTask: 'Validating automated furniture decision',
+    performance: 93,
+    collaborations: ['evaluation', 'optimization']
   }
 ];
 
 const collaborationScenarios = [
   {
-    id: 'laptop-purchase',
-    title: 'Marketing Team Laptop Purchase',
-    description: 'Complex request requiring multiple agent coordination',
-    participants: ['intake', 'sourcing', 'negotiation', 'compliance'],
+    id: 'multi-supplier-optimization',
+    title: 'Office Furniture Multi-Supplier Decision',
+    description: 'Complex optimization across 8 suppliers with varying capabilities',
+    participants: ['requirement', 'discovery', 'evaluation', 'optimization'],
     currentStep: 2,
     steps: [
-      { agent: 'intake', action: 'Process natural language request', status: 'completed' },
-      { agent: 'sourcing', action: 'Identify MacBook Pro suppliers', status: 'completed' },
-      { agent: 'negotiation', action: 'Negotiate volume pricing', status: 'active' },
-      { agent: 'compliance', action: 'Validate supplier compliance', status: 'pending' }
+      { agent: 'requirement', action: 'Parse furniture specifications and preferences', status: 'completed' },
+      { agent: 'discovery', action: 'Identify 8 qualified furniture suppliers', status: 'completed' },
+      { agent: 'evaluation', action: 'Multi-criteria analysis of all bids', status: 'active' },
+      { agent: 'optimization', action: 'Determine optimal supplier combination', status: 'pending' }
     ]
   },
   {
-    id: 'cloud-services',
-    title: 'Cloud Infrastructure RFQ',
-    description: 'Autonomous sourcing with market intelligence',
-    participants: ['sourcing', 'analytics', 'negotiation'],
+    id: 'automated-negotiation',
+    title: 'Software License Negotiation',
+    description: 'Autonomous negotiation with multiple SaaS providers',
+    participants: ['discovery', 'evaluation', 'negotiation', 'verification'],
     currentStep: 1,
     steps: [
-      { agent: 'analytics', action: 'Market trend analysis', status: 'completed' },
-      { agent: 'sourcing', action: 'Generate comprehensive RFQ', status: 'active' },
-      { agent: 'negotiation', action: 'Evaluate and negotiate bids', status: 'pending' }
+      { agent: 'discovery', action: 'Identify SaaS license providers', status: 'completed' },
+      { agent: 'evaluation', action: 'Analyze initial pricing proposals', status: 'completed' },
+      { agent: 'negotiation', action: 'Execute automated price negotiations', status: 'active' },
+      { agent: 'verification', action: 'Validate final terms and compliance', status: 'pending' }
     ]
   }
 ];
@@ -166,8 +179,8 @@ export function AIVisualization() {
     <div className="ai-visualization animate-fade-in">
       <div className="visualization-header">
         <div>
-          <h1>Multi-Agent AI System</h1>
-          <p>Real-time visualization of autonomous procurement intelligence</p>
+          <h1>Autonomous Decision Engine</h1>
+          <p>Real-time multi-agent AI system for procurement decision automation</p>
         </div>
         <div className="header-actions">
           <button 
@@ -267,7 +280,7 @@ export function AIVisualization() {
                 <Brain size={24} color="white" />
               </foreignObject>
               <text x="400" y="340" textAnchor="middle" className="hub-label">
-                AI Core
+                Decision Core
               </text>
             </svg>
           </div>
@@ -369,11 +382,11 @@ export function AIVisualization() {
               <div className="card-body">
                 <div className="system-stats">
                   <div className="stat-item">
-                    <div className="stat-value">6</div>
+                    <div className="stat-value">7</div>
                     <div className="stat-label">AI Agents</div>
                   </div>
                   <div className="stat-item">
-                    <div className="stat-value">4</div>
+                    <div className="stat-value">5</div>
                     <div className="stat-label">Active</div>
                   </div>
                   <div className="stat-item">
@@ -381,7 +394,7 @@ export function AIVisualization() {
                     <div className="stat-label">Tasks Today</div>
                   </div>
                   <div className="stat-item">
-                    <div className="stat-value">92%</div>
+                    <div className="stat-value">93%</div>
                     <div className="stat-label">Avg Performance</div>
                   </div>
                 </div>

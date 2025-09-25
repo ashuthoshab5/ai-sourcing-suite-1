@@ -173,17 +173,17 @@ export function SupplierRisk() {
     <div className="supplier-risk animate-fade-in">
       <div className="risk-header">
         <div>
-          <h1>Supplier Risk Management</h1>
-          <p>AI-powered real-time supplier risk monitoring and mitigation strategies</p>
+          <h1>Decision Confidence & Risk Analysis</h1>
+          <p>Real-time confidence monitoring and automated decision risk assessment</p>
         </div>
         <div className="risk-actions">
           <button className="btn btn-secondary">
             <Activity size={18} />
-            Risk Report
+            Confidence Report
           </button>
           <button className="btn btn-primary">
             <Zap size={18} />
-            AI Analysis
+            Decision Analysis
           </button>
         </div>
       </div>
@@ -211,22 +211,22 @@ export function SupplierRisk() {
       <div className="risk-content">
         <div className="suppliers-section">
           <div className="section-header">
-            <h2>Supplier Risk Portfolio</h2>
+            <h2>Decision Confidence Portfolio</h2>
             <div className="section-controls">
               <div className="search-box">
                 <Search size={16} />
-                <input type="text" placeholder="Search suppliers..." />
+                <input type="text" placeholder="Search decisions..." />
               </div>
               <select 
                 value={filterRisk} 
                 onChange={(e) => setFilterRisk(e.target.value)}
                 className="filter-select"
               >
-                <option value="all">All Risk Levels</option>
-                <option value="critical">Critical Risk</option>
-                <option value="high">High Risk</option>
-                <option value="medium">Medium Risk</option>
-                <option value="low">Low Risk</option>
+                <option value="all">All Confidence Levels</option>
+                <option value="critical">Critical Decisions</option>
+                <option value="high">High Value</option>
+                <option value="medium">Medium Confidence</option>
+                <option value="low">High Confidence</option>
               </select>
             </div>
           </div>
@@ -274,7 +274,7 @@ export function SupplierRisk() {
                   {supplier.activeAlerts > 0 && (
                     <div className="alerts-section">
                       <AlertTriangle size={16} />
-                      <span>{supplier.activeAlerts} active alerts</span>
+                      <span>{supplier.activeAlerts} confidence alerts</span>
                     </div>
                   )}
 
@@ -284,10 +284,10 @@ export function SupplierRisk() {
                       onClick={() => setSelectedSupplier(supplier)}
                     >
                       <Eye size={14} />
-                      View Details
+                      Decision Details
                     </button>
                     <button className="btn btn-primary btn-sm">
-                      Assess Risk
+                      Review Decision
                     </button>
                   </div>
                 </div>

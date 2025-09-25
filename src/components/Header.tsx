@@ -21,10 +21,10 @@ interface HeaderProps {
 
 const navigationItems = [
   { id: 'dashboard', label: 'Dashboard', icon: Building2 },
-  { id: 'chat', label: 'AI Assistant', icon: MessageSquare },
-  { id: 'workflows', label: 'Workflows', icon: Workflow },
-  { id: 'supplier-risk', label: 'Supplier Risk', icon: ShieldAlert },
-  { id: 'ai-agents', label: 'AI Agents', icon: Brain },
+  { id: 'chat', label: 'Decision Interface', icon: MessageSquare },
+  { id: 'workflows', label: 'Decision Pipeline', icon: Workflow },
+  { id: 'supplier-risk', label: 'Confidence Monitor', icon: ShieldAlert },
+  { id: 'ai-agents', label: 'Agent Network', icon: Brain },
   { id: 'analytics', label: 'Analytics', icon: BarChart3 },
 ];
 
