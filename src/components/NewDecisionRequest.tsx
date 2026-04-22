@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useAuth } from '../contexts/AuthContext';
 import { createDecisionRequest } from '../lib/decisions';
 import {
   X,
@@ -17,7 +16,6 @@ interface NewDecisionRequestProps {
 }
 
 export function NewDecisionRequest({ onClose, onSubmit }: NewDecisionRequestProps) {
-  const { user } = useAuth();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
@@ -45,15 +43,13 @@ export function NewDecisionRequest({ onClose, onSubmit }: NewDecisionRequestProp
     setLoading(true);
 
     try {
-      if (!user) throw new Error('User not authenticated');
-
       const value = parseFloat(estimatedValue);
       if (isNaN(value) || value <= 0) {
         throw new Error('Please enter a valid estimated value');
       }
 
       const { error } = await createDecisionRequest(
-        user.id,
+        'demo-user',
         title,
         description,
         category,
