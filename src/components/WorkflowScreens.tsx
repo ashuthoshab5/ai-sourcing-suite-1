@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Clock, 
+import {
+  ArrowRight,
+  CheckCircle,
+  Clock,
   AlertTriangle,
   User,
   FileText,
@@ -15,7 +15,13 @@ import {
   Filter,
   Plus,
   Eye,
-  MessageSquare
+  MessageSquare,
+  TrendingUp,
+  Target,
+  Activity,
+  BarChart3,
+  Zap,
+  Brain
 } from 'lucide-react';
 
 type WorkflowTab = 'intake' | 'sourcing' | 'purchase';
