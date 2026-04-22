@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-  TrendingUp, 
-  TrendingDown, 
-  DollarSign, 
-  Users, 
-  Clock, 
+import {
+  TrendingUp,
+  TrendingDown,
+  DollarSign,
+  Users,
+  Clock,
   Target,
   BarChart3,
   PieChart,
@@ -15,7 +15,8 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   AlertTriangle,
-  CheckCircle
+  CheckCircle,
+  Zap
 } from 'lucide-react';
 
 const analyticsData = {
